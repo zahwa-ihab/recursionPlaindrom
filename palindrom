@@ -1,0 +1,23 @@
+function pal(start , end , thisword){
+
+    if(thisword.length == 0 || thisword.length == 1){
+        return true;
+    }
+
+    if( thisword[start] != thisword[end] ){
+        console.log(thisword[start]);
+        console.log(thisword[end]);
+        return false;
+    }
+    else{
+        if(start != end){
+            pal(start+1 , end-1 , thisword);
+            console.log("plaindrom");
+        }
+    }
+    return true;
+}
+
+let thisword="deified";
+let isPlaindrom= pal(0, thisword.length-1 , thisword);
+console.log(isPlaindrom);
